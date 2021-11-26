@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
-import CartItem from "../Components/CartItem";
-import CheckBox from "../Components/CheckBox";
+import CartItem from "../components/CartItem";
+import CheckBox from "../components/CheckBox";
 
 export default function CartList({ cartItems, filterItem }) {
   useEffect(() => {
@@ -67,8 +67,7 @@ export default function CartList({ cartItems, filterItem }) {
 }
 
 const ListContainer = styled.div`
-  width: 1096px;
-  margin: 0 auto;
+  padding: 0 5%;
 
   tr:last-of-type {
     border-bottom: 1px solid #000000;
@@ -113,7 +112,6 @@ const OrderTotal = styled.div`
 const CheckContainer = styled.div`
   display: flex;
   align-items: center;
-
   padding-left: 30px;
   font-size: 15px;
 `;

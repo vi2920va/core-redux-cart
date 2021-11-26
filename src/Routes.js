@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import ProductList from "./Pages/ProductList";
-import CartList from "./Pages/CartList";
-import Nav from "./Components/Nav";
+import ProductList from "./pages/ProductList";
+import CartList from "./pages/CartList";
+import Nav from "./components/Nav";
 
 function Routes() {
   const [cartItems, setCartItems] = useState(CART_ITEM);

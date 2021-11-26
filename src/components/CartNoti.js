@@ -17,6 +17,7 @@ export default function CartNoti({ itemCount }) {
 
 const Icon = styled.div`
   position: relative;
+  margin-left: auto;
 `;
 
 const ItemCount = styled.div`

@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import styled from "styled-components";
-import ProductCard from "../Components/ProductCard";
+import ProductCard from "../components/ProductCard";
 
 function ProductList({ addToCart }) {
   useEffect(() => {
@@ -10,7 +10,6 @@ function ProductList({ addToCart }) {
   return (
     <ListContainer>
       <Title>상품 목록</Title>
-      <Line />
       <CardContainer>
         {CART_ITEM.map((e, i) => (
           <ProductCard key={i} item={e} addToCart={() => addToCart(e)} />
@@ -23,8 +22,7 @@ function ProductList({ addToCart }) {
 export default ProductList;
 
 const ListContainer = styled.div`
-  width: 1096px;
-  margin: 0 auto;
+  padding: 0 5%;
 `;
 
 const Title = styled.p`
@@ -32,18 +30,19 @@ const Title = styled.p`
   margin-bottom: 22px;
   font-weight: 900;
   font-size: 28px;
+  border-bottom: 4px solid #000;
 `;
 
-const Line = styled.div`
-  height: 2px;
-  margin-top: 22px;
-  margin-bottom: 29px;
-  background-color: black;
-`;
 
-const CardContainer = styled.div`
-  display: flex;
-  flex-wrap: wrap;
+const CardContainer = styled.ul`
+  flex-direction: column;
+  
+  @media screen and (min-width: 767px) {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 `;
 
 const CART_ITEM = [

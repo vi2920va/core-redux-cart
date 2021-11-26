@@ -13,7 +13,7 @@ export default function Nav({ itemCount }) {
   return (
     <NavContainer>
       <NavWrapper>
-        <NavTitle onClick={() => history.push("/")}>wemarkettt</NavTitle>
+        <NavTitle onClick={() => history.push("/")}>wemarket</NavTitle>
         <CartNoti itemCount={itemCount} width="32" height="32" />
       </NavWrapper>
     </NavContainer>
@@ -21,21 +21,13 @@ export default function Nav({ itemCount }) {
 }
 
 const NavContainer = styled.nav`
-  display: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 70px;
-  background-color: black;
-  color: white;
+  background:#000;
+  color:#fff;
 `;
 
 const NavWrapper = styled.div`
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 1096px;
-  margin: 0 auto;
+  padding: 0.5% 5%;
 `;
 
 const NavTitle = styled.span`

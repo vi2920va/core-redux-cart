@@ -16,40 +16,33 @@ export default function ProductCard({ addToCart, item }) {
   );
 }
 
-const Card = styled.div`
-  width: 250px;
-  height: 390px;
-  margin-right: 32px;
-  margin-bottom: 50px;
-
-  &:nth-child(4n) {
-    margin-right: 0;
-  }
+const Card = styled.li`
+  flex: 0 0 23%;
+  margin-bottom: 2%;
 `;
 
-const Img = styled.div`
-  width: 250px;
-  height: 250px;
-  margin-bottom: 20px;
+const Img = styled.img`
+  width: 100%;
   border-radius: 3px;
-
-  background: url(${({ src }) => src});
 `;
 
 const Title = styled.p`
   margin-bottom: 12px;
+  font-size: 15px;
+  font-weight: 900;
   font-family: Noto Sans KR;
   font-style: normal;
-  font-weight: 900;
-  font-size: 15px;
-  line-height: 130%;
-`;
+
+  @media screen and (min-width: 767px) {
+    font-size: 12px;
+  }
+  `;
 
 const Price = styled.span`
+  font-size: 15px;
   font-family: Noto Sans KR;
   font-style: normal;
   font-weight: bold;
-  font-size: 15px;
   color: #e82c23;
 `;
 
