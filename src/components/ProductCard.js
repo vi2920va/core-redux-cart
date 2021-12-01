@@ -1,14 +1,18 @@
 import React from "react";
+import { useDispatch } from "react-redux";
 import styled from "styled-components";
 import CartIcon from "./CartIcon";
+import { addCart } from '../store/actions/index';
 
-export default function ProductCard({ addToCart, item }) {
+export default function ProductCard({ item }) {
+  const dispatch = useDispatch();
+
   return (
     <Card>
       <Img src={item.product_img} />
       <Title>{item.product_name}</Title>
       <Price>{item.price.toLocaleString()} 원</Price>
-      <AddCartBtn onClick={() => addToCart()}>
+      <AddCartBtn onClick={() => dispatch(addCart(item))}>
         <CartIcon width="16" height="16" />
         <span>장바구니 담기</span>
       </AddCartBtn>
@@ -32,10 +36,6 @@ const Title = styled.p`
   font-weight: 900;
   font-family: Noto Sans KR;
   font-style: normal;
-
-  @media screen and (min-width: 767px) {
-    font-size: 12px;
-  }
   `;
 
 const Price = styled.span`

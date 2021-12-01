@@ -1,20 +1,16 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
 import { useHistory } from "react-router-dom";
 import CartNoti from "./CartNoti";
 
-export default function Nav({ itemCount }) {
+export default function Nav() {
   const history = useHistory();
-
-  useEffect(() => {
-    console.log("Nav render");
-  });
 
   return (
     <NavContainer>
       <NavWrapper>
         <NavTitle onClick={() => history.push("/")}>wemarket</NavTitle>
-        <CartNoti itemCount={itemCount} width="32" height="32" />
+        <CartNoti width="32" height="32" />
       </NavWrapper>
     </NavContainer>
   );

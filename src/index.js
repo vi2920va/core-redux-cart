@@ -1,8 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { createGlobalStyle } from "styled-components";
+import { createStore } from "redux";
+import { Provider } from "react-redux";
 import reset from "styled-reset";
+import { createGlobalStyle } from "styled-components";
+import reducers from "./store/reducers";
 import Routes from "./Routes";
+const store = createStore(reducers);
 
 const GlobalStyle = createGlobalStyle`
   ${reset}
@@ -14,9 +18,9 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 ReactDOM.render(
-  <React.StrictMode>
+  <Provider store={store}>
     <Routes />
     <GlobalStyle />
-  </React.StrictMode>,
+  </Provider>,
   document.getElementById("root")
 );

@@ -1,18 +1,15 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
 import ProductCard from "../components/ProductCard";
 
 function ProductList({ addToCart }) {
-  useEffect(() => {
-    console.log("ProductList render");
-  });
 
   return (
     <ListContainer>
       <Title>상품 목록</Title>
       <CardContainer>
         {CART_ITEM.map((e, i) => (
-          <ProductCard key={i} item={e} addToCart={() => addToCart(e)} />
+          <ProductCard key={i} item={e} />
         ))}
       </CardContainer>
     </ListContainer>

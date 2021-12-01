@@ -1,6 +1,8 @@
 import React from "react";
+import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
 import CheckBox from "./CheckBox";
+import { deleteCart } from "../store/actions";
 
 export default function CartItem({
   isChecked,
@@ -9,8 +11,17 @@ export default function CartItem({
   product_img,
   price,
   idx,
-  filterItem,
 }) {
+  const cartItems = useSelector(store => store.cartReducer)
+  const dispatch = useDispatch();
+
+  const filterItem = () => {
+    const items = cartItems.filter((_, i) => {
+      return i !== idx;
+    })
+    console.log(items);
+    dispatch(deleteCart(items))
+  };
   return (
     <Item>
       <CheckColumn>
