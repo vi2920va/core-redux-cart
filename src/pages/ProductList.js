@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import ProductCard from "../components/ProductCard";
 
-function ProductList({ addToCart }) {
+function ProductList() {
 
   return (
     <ListContainer>
