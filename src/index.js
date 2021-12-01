@@ -4,9 +4,10 @@ import { createStore } from "redux";
 import { Provider } from "react-redux";
 import reset from "styled-reset";
 import { createGlobalStyle } from "styled-components";
-import reducers from "./store/reducers";
+import rootReducer from './store/reducers/index';
 import Routes from "./Routes";
-const store = createStore(reducers);
+
+const store = createStore(rootReducer);
 
 const GlobalStyle = createGlobalStyle`
   ${reset}

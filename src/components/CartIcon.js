@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function CartIcon({ width, height }) {
+function CartIcon({ width, height }) {
   return (
     <svg
       width={width}
@@ -16,3 +16,4 @@ export default function CartIcon({ width, height }) {
     </svg>
   );
 }
+export default CartIcon;

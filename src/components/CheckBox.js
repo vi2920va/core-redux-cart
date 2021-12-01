@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-export default function CheckBox() {
+function CheckBox() {
   const [isClicked, setIsClicked] = useState(true);
   return (
     <Label isClicked={isClicked}>
@@ -10,6 +10,7 @@ export default function CheckBox() {
     </Label>
   );
 }
+export default CheckBox;
 
 const Label = styled.label`
   display: flex;

@@ -4,10 +4,9 @@ import styled from "styled-components";
 import CheckBox from "./CheckBox";
 import { deleteCart } from "../store/actions";
 
-export default function CartItem({
+function CartItem({
   isChecked,
   product_name,
-  product_id,
   product_img,
   price,
   idx,
@@ -19,7 +18,6 @@ export default function CartItem({
     const items = cartItems.filter((_, i) => {
       return i !== idx;
     })
-    console.log(items);
     dispatch(deleteCart(items))
   };
   return (
@@ -44,6 +42,7 @@ export default function CartItem({
     </Item>
   );
 }
+export default CartItem;
 
 const Item = styled.tr`
   width: 100%;
@@ -79,8 +78,6 @@ const ProductInfo = styled.td`
   p {
     padding-left: 30px;
     color: #000000;
-    text-align: left;
-
     &:first-of-type {
       margin-bottom: 8px;
       font-weight: bold;

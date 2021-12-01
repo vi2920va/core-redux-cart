@@ -4,7 +4,7 @@ import CartItem from "../components/CartItem";
 import CheckBox from "../components/CheckBox";
 import { useSelector } from 'react-redux';
 
-export default function CartList({ filterItem }) {
+function CartList() {
   const cartItems = useSelector(store => store.cartReducer)
 
   return (
@@ -63,10 +63,10 @@ export default function CartList({ filterItem }) {
     </ListContainer>
   );
 }
+export default CartList;
 
 const ListContainer = styled.div`
   padding: 0 5%;
-
   tr:last-of-type {
     border-bottom: 1px solid #000000;
   }
@@ -90,11 +90,9 @@ const CartHeader = styled.tr`
   height: 72px;
   border-bottom: 1px solid #000000;
   background: #fffef8;
-
   td {
     vertical-align: middle;
     text-align: center;
-
     &:first-of-type {
       padding-left: 29px;
     }
@@ -115,7 +113,7 @@ const CheckContainer = styled.div`
 `;
 
 const SelectCount = styled.span`
-  margin-left: 26px;
+  margin-left: 75px;
   margin-right: 41px;
 `;
 
@@ -124,14 +122,11 @@ const CancleBtn = styled.button`
   width: 110px;
   height: 40px;
   margin-left: 40px;
-
   background: #000000;
   border-radius: 3px;
-
   font-weight: bold;
   font-size: 15px;
   text-align: center;
-
   color: #ffffff;
 `;
 
@@ -139,23 +134,18 @@ const TotalPrice = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-
   width: 480px;
   height: 84px;
-
   padding-left: 51px;
   padding-right: 40px;
-
   background: #fffef8;
   border: 1px solid #000000;
   border-radius: 3px;
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.15);
-
   span {
     &:first-of-type {
       font-size: 15px;
     }
-
     &:last-of-type {
       font-weight: bold;
       font-size: 24px;
@@ -166,16 +156,13 @@ const TotalPrice = styled.div`
 const OrderBtnContainer = styled.div`
   margin-top: 30px;
   text-align: right;
-
   button {
     width: 180px;
     height: 50px;
-
     background: #e82c23;
     border: 1px solid #000000;
     border-radius: 3px;
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.15);
-
     font-weight: bold;
     font-size: 18px;
     color: #ffffff;

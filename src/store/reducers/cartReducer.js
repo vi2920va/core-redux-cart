@@ -1,3 +1,5 @@
+const INITAL_STATE = [];
+
 const cartReducer = (state = INITAL_STATE, action) => {
   switch (action.type) {
     case 'ADD_ITEM':
@@ -10,4 +12,3 @@ const cartReducer = (state = INITAL_STATE, action) => {
 }
 export default cartReducer;
 
-const INITAL_STATE = [];
