@@ -7,16 +7,16 @@
 ## 실행 방법
 
 ```bash
-$ npm run start
+$ yarn run start
 ```
 
 ## 프로젝트 링크
 
 ## 적용 기술
 
-- React.js(Hooks)
-- React-router-dom
+- React
 - React-redux
+- React-router-dom
 - Styled-Components
 
 ## 구현 기능

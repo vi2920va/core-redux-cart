@@ -2,7 +2,7 @@ import React from "react";
 import { useSelector } from "react-redux";
 import styled from "styled-components";
 import { useHistory } from "react-router-dom";
-import CartIcon from "./CartIcon";
+import CartIcon from "./CartIcon/CartIcon";
 
 export default function CartNoti() {
   const items = useSelector(store => store.cartReducer);

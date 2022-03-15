@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch } from "react-redux";
 import styled from "styled-components";
-import CartIcon from "./CartIcon";
+import CartIcon from "./CartIcon/CartIcon";
 import { addCart } from '../store/actions/index';
 
 export default function ProductCard({ item }) {
@@ -13,7 +13,7 @@ export default function ProductCard({ item }) {
       <Title>{item.product_name}</Title>
       <Price>{item.price.toLocaleString()} 원</Price>
       <AddCartBtn onClick={() => dispatch(addCart(item))}>
-        <CartIcon width="16" height="16" />
+        <CartIcon width={16} height={16} />
         <span>장바구니 담기</span>
       </AddCartBtn>
     </Card>

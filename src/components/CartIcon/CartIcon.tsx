@@ -1,6 +1,7 @@
 import React from "react";
+import { CartIconProps } from "./CartIcon.type";
 
-function CartIcon({ width, height }) {
+const CartIcon = ({ width, height }: CartIconProps) => {
   return (
     <svg
       width={width}
