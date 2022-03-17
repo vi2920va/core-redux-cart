@@ -50,13 +50,31 @@ const AddCartBtn = styled.button`
   all: unset;
   display: flex;
   align-items: center;
-
   width: 122px;
   height: 30px;
   margin-top: 24px;
   padding-left: 12px;
   background: #000000;
+  border: 1px solid transparent;
   border-radius: 3px;
+  cursor: pointer;
+
+  svg{
+    fill: white;
+  }
+
+  &:hover{
+    border: 1px solid #000;
+    border-radius: 3px;
+    background: #fff;
+    span{
+      color: #000000;
+    }
+
+    svg{
+      fill: #000000;
+    }
+  }
 
   span {
     padding-left: 14px;

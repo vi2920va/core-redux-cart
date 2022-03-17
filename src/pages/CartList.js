@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import CartItem from "../components/CartItem";
-import CheckBox from "../components/CheckBox";
+import CheckBox from "../components/CheckBox/CheckBox";
 import { useSelector } from 'react-redux';
 
 function CartList() {
@@ -35,8 +35,8 @@ function CartList() {
               {...e}
               key={e.product_img + i}
               idx={i}
-            />
-          ))}
+            />)
+          )}
         </tbody>
       </CartTable>
       <OrderTotal>
@@ -128,6 +128,7 @@ const CancleBtn = styled.button`
   font-size: 15px;
   text-align: center;
   color: #ffffff;
+  cursor: pointer;
 `;
 
 const TotalPrice = styled.div`

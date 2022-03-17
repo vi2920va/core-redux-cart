@@ -1,7 +1,7 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
-import CheckBox from "./CheckBox";
+import CheckBox from "./CheckBox/CheckBox";
 import { deleteCart } from "../store/actions";
 
 function CartItem({
@@ -11,6 +11,7 @@ function CartItem({
   price,
   idx,
 }) {
+
   const cartItems = useSelector(store => store.cartReducer)
   const dispatch = useDispatch();
 
@@ -98,6 +99,7 @@ const DeleteCircle = styled.div`
   height: 42px;
   border: 1px solid #e1e1e1;
   border-radius: 50%;
+  cursor: pointer;
 `;
 
 const DeleteIcon = styled.div`

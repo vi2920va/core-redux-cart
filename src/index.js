@@ -5,7 +5,7 @@ import { Provider } from "react-redux";
 import reset from "styled-reset";
 import { createGlobalStyle } from "styled-components";
 import rootReducer from './store/reducers/index';
-import Routes from "./Routes";
+import App from './App';
 
 const store = createStore(rootReducer);
 
@@ -20,7 +20,7 @@ const GlobalStyle = createGlobalStyle`
 
 ReactDOM.render(
   <Provider store={store}>
-    <Routes />
+    <App />
     <GlobalStyle />
   </Provider>,
   document.getElementById("root")

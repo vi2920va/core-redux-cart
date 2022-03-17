@@ -1,18 +1,19 @@
 import React from "react";
+import CartIcon from "./CartIcon/CartIcon";
+import { useNavigate } from 'react-router-dom';
 import { useSelector } from "react-redux";
 import styled from "styled-components";
-import { useHistory } from "react-router-dom";
-import CartIcon from "./CartIcon/CartIcon";
 
 export default function CartNoti() {
   const items = useSelector(store => store.cartReducer);
-  const history = useHistory();
+  const navigate = useNavigate();
+
   return (
-    <Icon onClick={() => history.push("/cart")}>
+    <Icon onClick={() => navigate("/cart")}>
       <ItemCount>
         <span>{items.length}</span>
       </ItemCount>
-      <CartIcon width="32" height="32" />
+      <CartIcon width={25} height={25} />
     </Icon>
   );
 }
@@ -20,17 +21,28 @@ export default function CartNoti() {
 const Icon = styled.div`
   position: relative;
   margin-left: auto;
+  padding: 2px 0;
+  cursor: pointer;
+
+  svg{
+    fill: white;
+  }
+  &:hover{
+    svg{
+      fill: gray;
+    }
+  }
 `;
 
 const ItemCount = styled.div`
   position: absolute;
-  top: -7px;
-  right: -7px;
+  top: -1px;
+  right: -6px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 19px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   border-radius: 2px;
   background-color: #e82c23;
   font-size: 11px;

@@ -1,4 +1,4 @@
-export type CartIconProps = {
+export default interface CartIconProps {
   width: number;
   height: number;
-};
+}
