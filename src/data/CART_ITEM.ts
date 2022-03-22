@@ -58,3 +58,5 @@ const CART_ITEM: CartItemProps[] = [
     price: 53250,
   },
 ];
+
+export default CART_ITEM;
