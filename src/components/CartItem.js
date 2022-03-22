@@ -1,8 +1,8 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
-import CheckBox from "./CheckBox/CheckBox";
-import { deleteCart } from "../store/actions";
+import CheckBox from "components/CheckBox/CheckBox";
+// import { deleteCart } from "../store/actions";
 
 function CartItem({
   isChecked,
@@ -19,7 +19,7 @@ function CartItem({
     const items = cartItems.filter((_, i) => {
       return i !== idx;
     })
-    dispatch(deleteCart(items))
+    // dispatch(deleteCart(items))
   };
   return (
     <Item>

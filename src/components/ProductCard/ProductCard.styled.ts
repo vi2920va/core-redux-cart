@@ -1,44 +1,24 @@
-import React from "react";
-import { useDispatch } from "react-redux";
-import styled from "styled-components";
-import CartIcon from "./CartIcon/CartIcon";
-import { addCart } from '../store/actions/index';
+import styled from 'styled-components';
 
-export default function ProductCard({ item }) {
-  const dispatch = useDispatch();
-
-  return (
-    <Card>
-      <Img src={item.product_img} />
-      <Title>{item.product_name}</Title>
-      <Price>{item.price.toLocaleString()} 원</Price>
-      <AddCartBtn onClick={() => dispatch(addCart(item))}>
-        <CartIcon width={16} height={16} />
-        <span>장바구니 담기</span>
-      </AddCartBtn>
-    </Card>
-  );
-}
-
-const Card = styled.li`
+export const CardItem = styled.li`
   flex: 0 0 23%;
   margin-bottom: 2%;
 `;
 
-const Img = styled.img`
+export const CardImg = styled.img`
   width: 100%;
   border-radius: 3px;
 `;
 
-const Title = styled.p`
+export const CardTitle = styled.h3`
   margin-bottom: 12px;
   font-size: 15px;
   font-weight: 900;
   font-family: Noto Sans KR;
   font-style: normal;
-  `;
+`;
 
-const Price = styled.span`
+export const CardText = styled.p`
   font-size: 15px;
   font-family: Noto Sans KR;
   font-style: normal;
@@ -46,7 +26,7 @@ const Price = styled.span`
   color: #e82c23;
 `;
 
-const AddCartBtn = styled.button`
+export const CartBtn = styled.button`
   all: unset;
   display: flex;
   align-items: center;
@@ -59,20 +39,20 @@ const AddCartBtn = styled.button`
   border-radius: 3px;
   cursor: pointer;
 
-  svg{
+  svg {
     fill: white;
   }
 
-  &:hover{
+  &:hover {
     border: 1px solid #000;
     border-radius: 3px;
     background: #fff;
-    
-    span{
+
+    span {
       color: #000000;
     }
 
-    svg{
+    svg {
       fill: #000000;
     }
   }

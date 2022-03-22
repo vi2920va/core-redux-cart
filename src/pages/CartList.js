@@ -1,11 +1,10 @@
 import React from "react";
 import styled from "styled-components";
-import CartItem from "../components/CartItem";
-import CheckBox from "../components/CheckBox/CheckBox";
-import { useSelector } from 'react-redux';
+import CheckBox from "components/CheckBox/CheckBox";
+// import { useSelector } from 'react-redux';
 
 function CartList() {
-  const cartItems = useSelector(store => store.cartReducer)
+  // const cartItems = useSelector(store => store.cartReducer)
 
   return (
     <ListContainer>
@@ -30,13 +29,13 @@ function CartList() {
             </td>
             <td />
           </CartHeader>
-          {cartItems.map((e, i) => (
+          {/* {cartItems.map((e, i) => (
             <CartItem
-              {...e}
+              item={e}
               key={e.product_img + i}
               idx={i}
             />)
-          )}
+          )} */}
         </tbody>
       </CartTable>
       <OrderTotal>
@@ -47,14 +46,14 @@ function CartList() {
         </CheckContainer>
         <TotalPrice>
           <span>결제예정금액</span>
-          <span>
+          {/* <span>
             {cartItems
               .reduce((acc, cur) => {
                 return (acc += cur.price);
               }, 0)
               .toLocaleString()}
             원
-          </span>
+          </span> */}
         </TotalPrice>
       </OrderTotal>
       <OrderBtnContainer>

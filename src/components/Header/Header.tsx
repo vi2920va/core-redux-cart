@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import * as S from './Header.styled';
-import CartNoti from "../CartNoti";
+import CartNoti from 'components/CartNoti';
 
 const Header = () => {
   const navigate = useNavigate();

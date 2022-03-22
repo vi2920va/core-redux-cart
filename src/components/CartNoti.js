@@ -1,17 +1,17 @@
 import React from "react";
 import CartIcon from "./CartIcon/CartIcon";
 import { useNavigate } from 'react-router-dom';
-import { useSelector } from "react-redux";
+import { useAppSelector } from '../hooks/useStore';
 import styled from "styled-components";
 
 export default function CartNoti() {
-  const items = useSelector(store => store.cartReducer);
+  const items = useAppSelector(cart => cart.reducer);
   const navigate = useNavigate();
 
   return (
     <Icon onClick={() => navigate("/cart")}>
       <ItemCount>
-        <span>{items.length}</span>
+        {/* <span>{items.length}</span> */}
       </ItemCount>
       <CartIcon width={25} height={25} />
     </Icon>
