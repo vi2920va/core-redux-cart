@@ -1,7 +1,7 @@
 import { CartItemProps } from './CART_ITEM.type';
 
 const CART_ITEM: CartItemProps[] = [
-  {
+  { 
     isChecked: true,
     product_name: '플루크 new 피그먼트 오버핏 반팔 티셔츠 FST701',
     product_id: 1304,
